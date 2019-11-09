@@ -192,19 +192,25 @@ void sun_to_usb(uint8_t keys[], uint8_t* modifiers) {
   }
 }
 
-int keyboard_reset() {
-  keyboard.write(0x01);
-  const uint8_t ret1 = keyboard.read();
-  const uint8_t ret2 = keyboard.read();
-  return (ret1 == 0xFF) && (ret2 == 0x04);
+void print_binary(uint8_t data) {
+  for (int i = 7; i >= 0; i--) {
+    if (data & (1 << i)) {
+      DigiKeyboard.print("1");
+    }
+    else {
+      DigiKeyboard.print("0");
+    }
+  }
+  DigiKeyboard.println("");
 }
 
 void keyboard_config() {
-  // Disable bell and click
+  // Disable bell
+  DigiKeyboard.delay(50);
   keyboard.write(0x03);
+  // Disable click
   DigiKeyboard.delay(50);
   keyboard.write(0x0B);
-  DigiKeyboard.delay(50);
 }
 
 // the setup routine runs once when you press reset:
@@ -215,9 +221,7 @@ void setup() {
   // LED
   pinMode(LED, OUTPUT);
   digitalWrite(LED, HIGH);
-  // Keyboard init
-  while (keyboard_reset());
-  DigiKeyboard.delay(100);
+  // Keyboard
   keyboard_config();
   digitalWrite(LED, LOW);
 }
