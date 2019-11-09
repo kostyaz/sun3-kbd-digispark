@@ -18,6 +18,7 @@ const table_item_t modifiers_table[] = {
   { 0x63, MOD_SHIFT_LEFT },
   { 0x6E, MOD_SHIFT_RIGHT },
   { 0x13, MOD_ALT_LEFT },
+  { 0x0D, MOD_ALT_RIGHT },
   { 0x78, MOD_GUI_LEFT },
   { 0x7A, MOD_GUI_RIGHT }
 };
@@ -63,7 +64,7 @@ const table_item_t keys_table[] = {
   { 0x2E, 84 },   // Num /
   { 0x2F, 85 },   // Num *
   { 0x47, 86 },   // Num -
-  { 0x31, 0 },    // Front ???
+  { 0x31, 119 },  // Front (Select)
   { 0x33, 124 },  // Copy
   { 0x35, 43 },   // Tab
   { 0x36, KEY_Q },
@@ -83,7 +84,7 @@ const table_item_t keys_table[] = {
   { 0x45, 82 },   // Up
   { 0x46, 75 },   // PgUp
   { 0x7D, 87 },   // Num +
-  { 0x48, 0 },    // Open ???
+  { 0x48, 116 },  // Open (Execute)
   { 0x49, 125 },  // Paste
   { 0x4D, KEY_A },
   { 0x4E, KEY_S },
@@ -120,8 +121,7 @@ const table_item_t keys_table[] = {
   { 0x76, 117 },  // Help
   { 0x77, 57 },   // Caps Lock
   { 0x79, KEY_SPACE },
-  { 0x43, 0 },    // Compose ???
-  { 0x0D, 0 },    // Graph ???
+  { 0x43, 101 },  // Compose (App)
   { 0x5E, 73 },   // Ins
   { 0x32, 76 }    // Del
 };
