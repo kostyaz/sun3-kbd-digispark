@@ -80,9 +80,9 @@ const table_item_t keys_table[] = {
   { 0x40, 47 },   // [{
   { 0x41, 48 },   // ]}
   { 0x59, KEY_ENTER },
-  { 0x44, 74 },   // Home
-  { 0x45, 82 },   // Up
-  { 0x46, 75 },   // PgUp
+  { 0x44, 95 },   // Num Home
+  { 0x45, 96 },   // Num Up
+  { 0x46, 97 },   // Num PgUp
   { 0x7D, 87 },   // Num +
   { 0x48, 116 },  // Open (Execute)
   { 0x49, 125 },  // Paste
@@ -113,7 +113,7 @@ const table_item_t keys_table[] = {
   { 0x6B, 54 },   // ,<
   { 0x6C, 55 },   // .>
   { 0x6D, 56 },   // /?
-  { 0x6F, 0 },    // Line Feed ???
+  { 0x6F, 83 },   // Line Feed -> remapping to Num Lock
   { 0x70, 89 },   // Num End
   { 0x71, 90 },   // Num Down
   { 0x72, 91 },   // Num PgDn
