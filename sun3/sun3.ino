@@ -228,7 +228,6 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-  static uint8_t last_keys[MAX_KEYS] = {0};
   DigiKeyboard.update();
   if (keyboard.available()) {
     DigiKeyboard.update();
@@ -238,14 +237,8 @@ void loop() {
     DigiKeyboard.update();
     uint8_t keys[MAX_KEYS];
     uint8_t modifiers;
-    DigiKeyboard.update();
     sun_to_usb(keys, &modifiers);
-    DigiKeyboard.update();
-    if (memcmp(keys, last_keys, MAX_KEYS)) {
-      DigiKeyboard.sendKeyPress(keys[0], modifiers);
-      memcpy(last_keys, keys, MAX_KEYS);
-      DigiKeyboard.update();
-    }
+    DigiKeyboard.sendKeyPress(keys[0], modifiers);
     digitalWrite(LED, LOW);
   }
 }
