@@ -17,11 +17,12 @@ Coiled cable with the DB-15 plug has been removed and replaced with a micro-USB 
 Inside the keyboard, the USB ATtiny85 board is connected by jumper wires with the keyboard interface. From top to bottom:
  * GND
  * +5 V
- * serial TX (from keyboard to MCU)
- * serial RX (from MCU to keyboard)
+ * serial TX (from keyboard to MCU): connected to P2 of the USB board
+ * serial RX (from MCU to keyboard): connected to P0 of the USB board
+
 The two pins that are not connected are for the Sun mouse (not sure what pin is what).
 
-The serial interface is asynchronous: 1200/8-N-1 with inverted polarity (level is low when the line is idle).
+The serial interface is asynchronous: 1200/8-N-1 with inverted polarity (level is low when the line is idle) and no flow control.
 
 ## Software
 Communication protocols - USB and serial - and keycode conversion are implemented in software. Provided Arduino sketch should compile and run on a Digispark board. It requires the following libraries:
