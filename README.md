@@ -33,3 +33,7 @@ This task barely fits the ATtiny85 MCU. The code consumes almost all of the avai
 Even with the above-mentioned limitations, the resulting implementation is robust enough to use the keyboard as the main computer keyboard when connected to a USB 1.1 or 2.0 port (that is if you get used to the key layout...).
 
 I hope someone else will find it useful...
+
+## Links
+[SPARC Keyboard Specification](http://kentie.net/article/sunkbd/KBD.pdf)
+[Sun special keys](http://kentie.net/article/sunkbd/sun%20keys.txt)
