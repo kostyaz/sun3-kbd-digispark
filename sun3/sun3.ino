@@ -1,5 +1,5 @@
 #include <SoftSerial_INT0.h>
-#include <DigiKeyboard.h>
+#include <DigiKeyboard_6K.h>
 
 typedef struct {
   uint8_t key;
@@ -191,7 +191,7 @@ void sun_to_usb(uint8_t keys[], uint8_t* modifiers) {
     keys[key_idx] = 0;
   }
 }
-
+/*
 void print_binary(uint8_t data) {
   for (int i = 7; i >= 0; i--) {
     if (data & (1 << i)) {
@@ -203,7 +203,7 @@ void print_binary(uint8_t data) {
   }
   DigiKeyboard.println("");
 }
-
+*/
 void keyboard_config() {
   // Disable bell
   DigiKeyboard.delay(50);
@@ -238,7 +238,7 @@ void loop() {
     uint8_t keys[MAX_KEYS];
     uint8_t modifiers;
     sun_to_usb(keys, &modifiers);
-    DigiKeyboard.sendKeyPress(keys[0], modifiers);
+    DigiKeyboard.sendMultipleKeyPresses(keys, modifiers);
     digitalWrite(LED, LOW);
   }
 }
