@@ -35,5 +35,5 @@ Even with the above-mentioned limitations, the resulting implementation is robus
 I hope someone else will find it useful...
 
 ## Links
-[SPARC Keyboard Specification](http://kentie.net/article/sunkbd/KBD.pdf)
-[Sun special keys](http://kentie.net/article/sunkbd/sun%20keys.txt)
+ * [SPARC Keyboard Specification](http://kentie.net/article/sunkbd/KBD.pdf)
+ * [Sun special keys](http://kentie.net/article/sunkbd/sun%20keys.txt)
